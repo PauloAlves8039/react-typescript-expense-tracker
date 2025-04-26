@@ -1,9 +1,11 @@
-import "./App.css";
+import * as C from "./App.styles";
 
 export default function App() {
   return (
     <>
-      <div>Expense Tracker</div>
+      <C.Container>
+        ...
+      </C.Container>
     </>
   )
 }
