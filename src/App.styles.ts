@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
-const purpleColor1 = "#7A67EE";
-const neutralColor1 = "#FFF";
+import { purpleColor1, neutralColor1 } from "./styles/colors";
 
 export const Container = styled.div``;
 
