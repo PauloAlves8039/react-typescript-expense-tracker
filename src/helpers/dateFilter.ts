@@ -33,8 +33,8 @@ const addZeroToDate = (n: number): string => n < 10 ? `0${n}` : `${n}`;
 
 export const formatCurrentMonth = (currentMonth: string): string => {
     let [year, month] = currentMonth.split("-");
-    let months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-    return `${months[parseInt(month) - 1]} de ${year}`;
+    let months = ["January", "February", "March", "April", "May", "June", "July’", "August", "September’", "October", "November", "December"];
+    return `${months[parseInt(month) - 1]} - ${year}`;
 }
 
 export const newDateAdjusted = (dateField: string) => {
