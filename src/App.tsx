@@ -1,12 +1,12 @@
 import * as C from "./App.styles";
 import { useState, useEffect } from "react";
 import { Item } from "./types/Item";
-import { Category } from "./types/Category";
 import { categories } from "./data/categories";
 import { items } from "./data/items";
 import { getCurrentMonth, filterListByMonth } from "./helpers/dateFilter";
 import { TableArea } from "./components/TableArea";
 import { InfoArea } from "./components/InfoArea";
+import { InputArea } from "./components/InputArea";
 
 export default function App() {
   const [list, setList] = useState(items);
@@ -38,6 +38,12 @@ export default function App() {
   const handleMonthChange = (newMonth: string) => {
     setCurrentMonth(newMonth);
   }
+
+  const handleAddItem = (item: Item) => {
+    let newList = [...list];
+    newList.push(item);
+    setList(newList);
+  }
   
   return (
     <>
@@ -52,6 +58,9 @@ export default function App() {
             income={income}
             expense={expense} 
           />
+
+          <InputArea onAdd={handleAddItem} />
+
           <TableArea list={filteredList} />
         </C.Body>
       </C.Container>
