@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { neutralColor1 } from '../../styles/colors';
+import styled from "styled-components";
+import { neutralColor1 } from "../../styles/colors";
 
 export const TableLine = styled.tr``;
 
