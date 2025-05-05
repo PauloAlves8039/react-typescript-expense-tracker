@@ -4,7 +4,7 @@ import { neutralColor1,
          blueColor1, 
          greenColor1, 
          redColor1 
-        } from '../../styles/colors';
+        } from "../../styles/colors";
 
 export const Container = styled.div`
     background-color: ${neutralColor1};
