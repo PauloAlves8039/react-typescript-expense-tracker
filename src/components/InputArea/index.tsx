@@ -83,6 +83,11 @@ export const InputArea = ({ onAdd }: Props) => {
                 <C.InputTitle>&nbsp;</C.InputTitle>
                 <C.ButtonGroup>
                     <C.PrimaryButton onClick={handleAddEvent}>Add</C.PrimaryButton>
+                </C.ButtonGroup>
+            </C.InputLabel>
+            <C.InputLabel>
+                <C.InputTitle>&nbsp;</C.InputTitle>
+                <C.ButtonGroup>
                     <C.CancelButton onClick={clearFields}>Cancel</C.CancelButton>
                 </C.ButtonGroup>
             </C.InputLabel>

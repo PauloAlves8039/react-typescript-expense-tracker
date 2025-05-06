@@ -21,8 +21,9 @@ export const InputLabel = styled.label`
 `;
 export const InputTitle = styled.div`
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 5px;    
 `;
+
 export const Input = styled.input`
     width: 100%;
     height: 30px;
@@ -30,6 +31,7 @@ export const Input = styled.input`
     border: 1px solid ${blueColor1};
     border-radius: 5px;
 `;
+
 export const Select = styled.select`
     width: 100%;
     height: 30px;
@@ -44,7 +46,7 @@ export const ButtonGroup = styled.div`
 `;
 
 export const BaseButton = styled.button`
-    width: 40%;
+    width: 100%;
     height: 30px;
     padding: 0 5px;
     border: 1px solid ${grayColor1};
@@ -55,6 +57,7 @@ export const BaseButton = styled.button`
 
 export const PrimaryButton = styled(BaseButton)`
     color: ${greenColor1};
+    margin-left: 2px;
 
     &:hover {
         background-color: ${greenColor1};
@@ -64,6 +67,7 @@ export const PrimaryButton = styled(BaseButton)`
 
 export const CancelButton = styled(BaseButton)`
     color: ${redColor1};
+    margin-left: -5px;
 
     &:hover {
         background-color: ${redColor1};
