@@ -7,6 +7,7 @@ import { getCurrentMonth, filterListByMonth } from "./helpers/dateFilter";
 import { TableArea } from "./components/TableArea";
 import { InfoArea } from "./components/InfoArea";
 import { InputArea } from "./components/InputArea";
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
   const [list, setList] = useState(items);
@@ -52,6 +53,7 @@ export default function App() {
           <C.HeaderText>Financial System</C.HeaderText>
         </C.Header>
         <C.Body>
+          <ToastContainer autoClose={3000} />
           <InfoArea 
             currentMonth={currentMonth}
             onMonthChange={handleMonthChange}
