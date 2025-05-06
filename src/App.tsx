@@ -52,7 +52,7 @@ export default function App() {
         <C.Header>
           <C.HeaderText>Financial System</C.HeaderText>
         </C.Header>
-        <C.Body>
+        <C.Body className="animation-fade-in-downbig-2s">
           <ToastContainer autoClose={3000} />
           <InfoArea 
             currentMonth={currentMonth}
