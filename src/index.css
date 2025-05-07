@@ -11,3 +11,8 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
+
+.animation-fade-in-downbig-2s {
+    animation: fadeInDownBig;
+    animation-duration: 2s;
+}

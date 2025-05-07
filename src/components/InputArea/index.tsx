@@ -3,6 +3,7 @@ import * as C from "./styles";
 import { Item } from "../../types/Item";
 import { categories } from "../../data/categories";
 import { newDateAdjusted } from "../../helpers/dateFilter";
+import notificationService from "../../helpers/notificationService";
 
 type Props = {
     onAdd: (item: Item) => void;
@@ -33,7 +34,7 @@ export const InputArea = ({ onAdd }: Props) => {
         }
 
         if (errors.length > 0) {
-            alert(errors.join("\n"));
+            errors.forEach(error => notificationService.error(error));
         } else {
             onAdd({
                 date: newDateAdjusted(dateField),
@@ -41,6 +42,7 @@ export const InputArea = ({ onAdd }: Props) => {
                 title: titleField,
                 value: valueField
             });
+            notificationService.success("Item added successfully!");
             clearFields();
         }
     }
@@ -81,6 +83,11 @@ export const InputArea = ({ onAdd }: Props) => {
                 <C.InputTitle>&nbsp;</C.InputTitle>
                 <C.ButtonGroup>
                     <C.PrimaryButton onClick={handleAddEvent}>Add</C.PrimaryButton>
+                </C.ButtonGroup>
+            </C.InputLabel>
+            <C.InputLabel>
+                <C.InputTitle>&nbsp;</C.InputTitle>
+                <C.ButtonGroup>
                     <C.CancelButton onClick={clearFields}>Cancel</C.CancelButton>
                 </C.ButtonGroup>
             </C.InputLabel>
