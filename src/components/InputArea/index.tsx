@@ -4,6 +4,7 @@ import { Item } from "../../types/Item";
 import { categories } from "../../data/categories";
 import { newDateAdjusted } from "../../helpers/dateFilter";
 import notificationService from "../../helpers/notificationService";
+import { FaPlus, FaTimes } from 'react-icons/fa';
 
 type Props = {
     onAdd: (item: Item) => void;
@@ -82,13 +83,19 @@ export const InputArea = ({ onAdd }: Props) => {
             <C.InputLabel>
                 <C.InputTitle>&nbsp;</C.InputTitle>
                 <C.ButtonGroup>
-                    <C.PrimaryButton onClick={handleAddEvent}>Add</C.PrimaryButton>
+                    <C.PrimaryButton onClick={handleAddEvent}>
+                        <C.Icon><FaPlus size={14} /></C.Icon>
+                        Add
+                    </C.PrimaryButton>
                 </C.ButtonGroup>
             </C.InputLabel>
             <C.InputLabel>
                 <C.InputTitle>&nbsp;</C.InputTitle>
                 <C.ButtonGroup>
-                    <C.CancelButton onClick={clearFields}>Cancel</C.CancelButton>
+                    <C.CancelButton onClick={clearFields}>
+                        <C.Icon><FaTimes size={14} /></C.Icon>
+                        Cancel
+                    </C.CancelButton>
                 </C.ButtonGroup>
             </C.InputLabel>
 

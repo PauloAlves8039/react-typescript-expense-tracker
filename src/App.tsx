@@ -1,4 +1,5 @@
 import * as C from "./App.styles";
+import favicon from './assets/icons/favicon.ico';
 import { useState, useEffect } from "react";
 import { Item } from "./types/Item";
 import { categories } from "./data/categories";
@@ -50,7 +51,10 @@ export default function App() {
     <>
       <C.Container>
         <C.Header>
-          <C.HeaderText>Financial System</C.HeaderText>
+          <C.HeaderText>
+            <img src={favicon} alt="icon" />
+            Financial System
+          </C.HeaderText>
         </C.Header>
         <C.Body className="animation-fade-in-downbig-2s">
           <ToastContainer autoClose={3000} />
