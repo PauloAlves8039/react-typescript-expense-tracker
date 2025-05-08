@@ -14,6 +14,16 @@ export const HeaderText = styled.h1`
     padding: 0;
     color: ${neutralColor1};
     padding-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
 `;
 
 export const Body = styled.div`

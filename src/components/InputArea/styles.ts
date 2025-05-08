@@ -74,3 +74,12 @@ export const CancelButton = styled(BaseButton)`
         color: ${neutralColor1};
     }
 `;
+
+export const Icon = styled.span`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+    position: relative;
+    top: 1px;
+`;
